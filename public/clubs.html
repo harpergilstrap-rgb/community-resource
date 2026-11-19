@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="Find Cartersville clubs, youth and adult sports, volunteer groups, registration links, and upcoming tryout dates.">
+  <title>Clubs & teams | Common Ground Cartersville</title>
+  <link rel="stylesheet" href="/subpages.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="utility-bar"><div class="wrap utility-inner"><label class="language-picker" for="page-language">Translate page<select id="page-language" disabled aria-describedby="language-status"><option value="en">English</option></select></label><p class="language-status" id="language-status" role="status" aria-live="polite">Loading translation options...</p><details class="accessibility-menu"><summary>Accessibility</summary><div class="accessibility-panel"><h2>Accessibility settings</h2><label><input type="checkbox" data-accessibility="large-text"> Larger text</label><label><input type="checkbox" data-accessibility="high-contrast"> High contrast</label><label><input type="checkbox" data-accessibility="underline-links"> Underline links</label><label><input type="checkbox" data-accessibility="reduce-motion"> Reduce motion</label><button class="accessibility-reset" type="button" data-accessibility-reset>Reset settings</button><p class="utility-status" data-accessibility-status role="status" aria-live="polite"></p></div></details></div></div>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="Common Ground, Cartersville home"><span class="brand-mark" aria-hidden="true">c</span><span><span class="brand-name">common ground</span><span class="brand-place">Cartersville, Georgia · 30120</span></span></a>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/mayor">Mayor</a><a href="/clubs" aria-current="page">Clubs & teams</a><a href="/#calendar">Calendar</a><a href="/#volunteer">Volunteer</a></nav>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">+</button>
+    <a class="header-action" href="/#calendar">View club events ↓</a>
+  </div></header>
+  <main id="main" tabindex="-1">
+    <section class="page-hero"><div class="wrap"><p class="eyebrow">Sports, service, and shared interests</p><h1>Find your people. Join a team.</h1><p>Browse local sports programs and community groups. Favorite a club to find its published dates in the calendar.</p></div></section>
+    <section class="page-section wrap" aria-labelledby="clubs-title"><p class="eyebrow-inline">Local groups</p><h2 class="section-title" id="clubs-title">Clubs and teams around Cartersville</h2><p class="section-intro">Each listing has a 50-word description and an official program, membership, or club-finder link. Signup windows change; check the host's current page before registering.</p>
+      <div class="club-toolbar"><div class="club-filters" aria-label="Filter clubs"><button class="club-filter" type="button" data-club-filter="all" aria-pressed="true">All groups</button><button class="club-filter" type="button" data-club-filter="sports" aria-pressed="false">Sports</button><button class="club-filter" type="button" data-club-filter="community" aria-pressed="false">Community clubs</button><button class="club-filter" type="button" data-club-filter="volunteer" aria-pressed="false">Volunteering</button><button class="club-filter" type="button" data-club-filter="favorites" aria-pressed="false">My favorites</button></div><p class="club-favorites-note" id="club-favorites-status" role="status" aria-live="polite"></p></div>
+      <div class="club-grid" id="club-grid" aria-live="polite"></div>
+    </section>
+    <section class="club-events" id="club-events" aria-labelledby="club-events-title"><div class="wrap"><p class="eyebrow-inline">Published dates</p><h2 class="section-title" id="club-events-title">Upcoming team and club events</h2><p class="section-intro">Only dates published by an official host appear here. Favorite the associated club to filter for its events on the main calendar.</p><div class="club-event-list" id="club-event-list" aria-live="polite"></div><p class="event-disclaimer">The City has listed basketball evaluation times but has not posted gym locations for these tryouts. Confirm the location and eligibility on the official program page before attending.</p><p class="source-note"><a href="/#calendar">Open the full calendar and choose “My clubs” ↗</a></p></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><p class="footer-note">Common Ground · Cartersville, Georgia 30120<br>Registration links open on the official City or organization website.</p><div class="footer-links"><a href="/">Home</a><a href="/mayor">Mayor</a><a href="/#calendar">Calendar</a><a href="/#sources">Sources & credits</a></div></div></footer>
+  <script>
+    const menuToggle=document.querySelector("#menu-toggle");
+    const mainNav=document.querySelector("#main-nav");
+    function closeSubpageMenu(){menuToggle.setAttribute("aria-expanded","false");menuToggle.setAttribute("aria-label","Open navigation");menuToggle.textContent="+";mainNav.classList.remove("is-open")}
+    menuToggle.addEventListener("click",()=>{const open=menuToggle.getAttribute("aria-expanded")==="true";if(open){closeSubpageMenu()}else{menuToggle.setAttribute("aria-expanded","true");menuToggle.setAttribute("aria-label","Close navigation");menuToggle.textContent="×";mainNav.classList.add("is-open")}});
+    mainNav.querySelectorAll("a").forEach(link=>link.addEventListener("click",closeSubpageMenu));
+    document.addEventListener("keydown",event=>{if(event.key==="Escape"&&menuToggle.getAttribute("aria-expanded")==="true"){closeSubpageMenu();menuToggle.focus()}});
+  </script>
+  <script src="/clubs-data.js" defer></script>
+  <script src="/clubs.js" defer></script>
+  <script src="/languages.js" defer></script>
+  <script src="/accessibility.js" defer></script>
+</body>
+</html>
