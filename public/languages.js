@@ -15,3 +15,4 @@ function initializeLanguages() {
   languageStatus.classList.add("is-visible");
   restoreLanguage();
 }
+initializeLanguages();
