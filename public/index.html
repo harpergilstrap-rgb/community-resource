@@ -187,7 +187,7 @@
   <div class="utility-bar"><div class="wrap utility-inner"><label class="language-picker" for="page-language">Translate page<select id="page-language" disabled aria-describedby="language-status"><option value="en">English</option></select></label><p class="language-status" id="language-status" role="status" aria-live="polite">Loading translation options...</p><details class="accessibility-menu"><summary>Accessibility</summary><div class="accessibility-panel"><h2>Accessibility settings</h2><label><input type="checkbox" data-accessibility="large-text"> Larger text</label><label><input type="checkbox" data-accessibility="high-contrast"> High contrast</label><label><input type="checkbox" data-accessibility="underline-links"> Underline links</label><label><input type="checkbox" data-accessibility="reduce-motion"> Reduce motion</label><button class="accessibility-reset" type="button" data-accessibility-reset>Reset settings</button><p class="utility-status" data-accessibility-status role="status" aria-live="polite"></p></div></details></div></div>
   <header class="site-header"><div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="Common Ground, Cartersville home"><span class="brand-mark" aria-hidden="true">c</span><span><span class="brand-name">common ground</span><span class="brand-place">Cartersville, Georgia · 30120</span></span></a>
-    <nav class="main-nav" id="main-nav" aria-label="Main navigation"><a href="#directory">Local resources</a><a href="#calendar">Calendar</a><a href="#volunteer">Volunteer</a><a href="/clubs">Clubs & teams</a><a href="/mayor">Mayor</a><a href="#connect">Ask a question</a></nav>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation"><a href="#directory">Local resources</a><a href="#calendar">Calendar</a><a href="#volunteer">Volunteer</a><a href="./clubs.html">Clubs & teams</a><a href="./mayor.html">Mayor</a><a href="#connect">Ask a question</a></nav>
     <div style="display:flex;align-items:center;gap:8px"><a class="header-action" href="https://www.211.org/" target="_blank" rel="noopener noreferrer" aria-label="Call 211 or visit 211.org for help">Need help now</a><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">+</button></div>
   </div></header>
   <main id="main" tabindex="-1">
@@ -300,9 +300,9 @@
     addEvents();window.addEventListener("hashchange",restoreThreadFromHash);restoreThreadFromHash();
   </script>
   <dialog class="rsvp-dialog" id="rsvp-dialog" aria-labelledby="rsvp-dialog-title"><div class="rsvp-dialog-inner"><div class="rsvp-dialog-header"><div><h2 id="rsvp-dialog-title">RSVP to this event</h2><p id="rsvp-event-title"></p></div><button class="dialog-close" id="rsvp-close" type="button" aria-label="Close RSVP dialog">×</button></div><p class="panel-intro">Your RSVP adds to the attendee count. No name or email address is collected.</p><form id="rsvp-form"><input id="rsvp-event-id" name="eventId" type="hidden"><div class="form-bottom"><p class="form-status" id="rsvp-status" role="status" aria-live="polite"></p><button class="submit-button" type="submit">Count me in</button></div></form></div></dialog>
-  <script src="/clubs-data.js" defer></script>
-  <script src="/calendar.js" defer></script>
-  <script src="/languages.js" defer></script>
-  <script src="/accessibility.js" defer></script>
+  <script src="./clubs-data.js" defer></script>
+  <script src="./calendar.js" defer></script>
+  <script src="./languages.js" defer></script>
+  <script src="./accessibility.js" defer></script>
 </body>
 </html>
